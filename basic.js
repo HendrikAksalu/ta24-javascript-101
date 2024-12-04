@@ -9,16 +9,18 @@ const fullName = "Karl Rauniste";
 // Object => {}
 
 // Muutujad - nimetus ja väärtus (NB: Muutumatu vs Muudetav)
-// Muutujate nimetus on CamelCase and it makses some sense
+// Muutujate nimetus on CamelCase and it makes some sense
 const fruit = "Banaan"; // Muutuja, mida ei saa enam muuta
 let model = "BMW"; // Muutuja, mida saab muuta
+const nullableVariable = null; // Null tähendab, et muutujatel ei ole väärtust
+const undefinedvariable = undefined; // Undefined tähendab errorit, ei saa kontrollida
 
 // Koodiblokk => SCOPE
 // Koodiblokki tähistab () sümbol (objekti sümbol)
 // Function Scope
 const calculateSum = (number1, number2) => {
-    
-    // console.log (fullName);
+    const number3 = 256;
+    // console.log (teacherName);
     return number1 + number2;
 };
 
@@ -62,3 +64,12 @@ characters.forEach((char) => {
     console.log("For Each loop: ", char);
 }) 
 
+// Comparison
+// == vs === vs Object.is()
+//Object.is() is same thing as ===
+
+// == compares value of both sides. As values they are both equal: 5 or "5".0
+console.log(5 == "5"); // returns True
+
+// === comapares value and data-type of both sides, number 5 is not equal to string 5.
+console.log(5 === "5"); // return false
